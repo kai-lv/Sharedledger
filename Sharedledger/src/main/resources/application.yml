@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    #要使用的连接池实现的完全限定名。默认情况下，它是从类路径自动检测的。
+    type: com.alibaba.druid.pool.DruidDataSource
+    #数据库的JDBC URL
+    url: jdbc:mysql://localhost:3306/mysql?useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+    #用户名
+    username: root
+    #密码
+    password: 123456
+    #JDBC驱动程序的完全限定名。默认情况下根据URL自动检测。
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    #防止报错
+    open-in-view: false
+    hibernate:
+      ddl-auto: update #自动更新
+    show-sql: true  #日志中显示sql语句
+server:
+  port: 2334 #端口号
